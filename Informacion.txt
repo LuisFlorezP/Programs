@@ -1,0 +1,3 @@
+
+    "Este repositorio es con la finalidad de subir los códigos con mayor dificultad que iré realizando en los diferentes lenguajes
+    que estaré avanzando poco a poco, inicialmente python y java."
