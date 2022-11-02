@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Plan_4 {
+public class Plan {
     public static void main(String[] args){
         String nombre, documento, categoria, vehiculo, factura;
         int menu, personas, valorV;
