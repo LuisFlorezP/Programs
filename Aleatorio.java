@@ -2,9 +2,9 @@ import javax.swing.JOptionPane;
 
 public class Aleatorio {
     public static void main(String[] args) {
-        String premio;
-        int menu;
-        double aleatorio;
+        String premio="";
+        int menu=0;
+        double aleatorio=0;
 
         JOptionPane.showMessageDialog(null,"☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸\nBIENVENIDO AL PROGRAMA DE ADIVINAR NÚMERO\n☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸☸","LUCHINI S.A.S",javax.swing.JOptionPane.INFORMATION_MESSAGE);
         do {
@@ -13,7 +13,7 @@ public class Aleatorio {
                 case 1:
                     aleatorio=Math.round(Math.random()*10);
                     premio=premio();
-                    programa();
+                    programa(aleatorio,premio);
                     break;
                 case 2:
                     JOptionPane.showMessageDialog(null,"Saliendo del sistema...","LUCHINI S.A.S",JOptionPane.WARNING_MESSAGE);
@@ -26,8 +26,8 @@ public class Aleatorio {
     }    
     
     static String premio() {
-        String premio="", premio1="Smart TV.", premio2="Laptop.";
-        int opcion;
+        String premio="", premio1="Smart TV", premio2="Laptop";
+        int opcion=0;
 
         do {
             opcion=Integer.parseInt(JOptionPane.showInputDialog(null,"Seleccionar opción de premio para la rifa:\n   - Opción 1: Smart TV.\n   - Opción 2: Laptop.","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE));
@@ -45,18 +45,25 @@ public class Aleatorio {
         return (premio);
     }
     
-    static void programa() {
-        String n1, n2, n3, d1, d2, d3;
-        int personas=0, p1=0, p2=0, p3=0;
+    static void programa(double valor, String premio) {
+        String n1="", n2="", n3="", d1="", d2="", d3="", nG="", dG="", mensaje="";
+        int opcion=0, num=0, ganador=0, p1=0, p2=0, p3=0, fin=0;
 
         while (fin<3) {
-            personas=Integer.parseInt(JOptionPane.showInputDialog(null,"Seleccionar opción:\n   - Opción 1: Números de la persona N°1.\n   - Opción 2: Números de la persona N°2.\n   - Opción 3: Números de la persona N°3.","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE));
-            switch (personas) {
+            opcion=Integer.parseInt(JOptionPane.showInputDialog(null,"Seleccionar opción:\n   - Opción 1: Números de la persona N°1.\n   - Opción 2: Números de la persona N°2.\n   - Opción 3: Números de la persona N°3.","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE));
+            switch (opcion) {
                 case 1:
                     if (p1==0) {
-                        n1=JOptionPane.showInputDialog(null,"Ingresar nombre completo:","☸☸☸FIN ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE);
+                        n1=JOptionPane.showInputDialog(null,"Ingresar nombre completo:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE);
                         d1=JOptionPane.showInputDialog(null,"Ingresar número de documento de identidad:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE);
-                        Persona1();
+                        for (int ct=1;ct<=3;ct++) {
+                            num=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresar número entero del 1 al 10:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE));
+                            if (num==valor&&ganador==0) {
+                                nG=n1;
+                                dG=d1;
+                                ++ganador;
+                            }
+                        }
                         ++p1; ++fin;
                     }
                     else {
@@ -65,9 +72,16 @@ public class Aleatorio {
                     break;
                 case 2:
                     if (p2==0) {
-                        n2=JOptionPane.showInputDialog(null,"Ingresar nombre completo:","☸☸☸FIN ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE);
+                        n2=JOptionPane.showInputDialog(null,"Ingresar nombre completo:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE);
                         d2=JOptionPane.showInputDialog(null,"Ingresar número de documento de identidad:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE);
-                        Persona2();
+                        for (int ct=1;ct<=3;ct++) {
+                            num=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresar número entero del 1 al 10:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE));
+                            if (num==valor&&ganador==0) {
+                                nG=n2;
+                                dG=d2;
+                                ++ganador;
+                            }
+                        }
                         ++p2; ++fin;
                     }
                     else {
@@ -76,9 +90,16 @@ public class Aleatorio {
                     break;
                 case 3:
                     if (p3==0) {
-                        n3=JOptionPane.showInputDialog(null,"Ingresar nombre completo:","☸☸☸FIN ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE);
+                        n3=JOptionPane.showInputDialog(null,"Ingresar nombre completo:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE);
                         d3=JOptionPane.showInputDialog(null,"Ingresar número de documento de identidad:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE);
-                        Persona3();
+                        for (int ct=1;ct<=3;ct++) {
+                            num=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresar número entero del 1 al 10:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE));
+                            if (num==valor&&ganador==0) {
+                                nG=n3;
+                                dG=d3;
+                                ++ganador;
+                            }
+                        }
                         ++p3; ++fin;
                     }
                     else {
@@ -90,39 +111,18 @@ public class Aleatorio {
                     break;
             }
         }
-        Resultado();
+        if (ganador!=0) {
+            mensaje=Resultado(nG,dG,valor,premio);
+            JOptionPane.showMessageDialog(null,mensaje,"☸☸☸FELICITACIONES☸☸☸",JOptionPane.INFORMATION_MESSAGE);
+        }     
+        else {
+            JOptionPane.showMessageDialog(null,"FIN DE LA RIFA","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.INFORMATION_MESSAGE);
+        }   
     }
 
-    static void Persona1() {
-        for (cont=1;cont<=3;cont++) {
-            eleccion=Integer.parseInt(JOptionPane.showInputDialog(null,"Ingresar número entero del 1 al 10:","☸☸☸ADIVINAR NÚMERO☸☸☸",JOptionPane.QUESTION_MESSAGE));
-            if (eleccion==numeroA&&ganador==0) {
-                nomGanador=nombre;
-                docGanador=documento;
-                ++ganador;
-                ++fallo;
-            }
-        }
-        if (fallo==0) {
-            ++finRifa;
-        }
-    }
-
-    static void Persona2() {
+    static String Resultado(String nom, String doc, double valor, String premio) {
+        String resul="¡FELICIDADES, TENEMOS UN GANADOR!\n   - Nombre ganador: "+nom+".\n   - Documento ganador: "+doc+".\n   - Premio: "+premio+".\n   - Número de la rifa: "+valor+".";
         
-    }
-
-    static void Persona3() {
-        
-    }
-
-    static void Resultado() {
-        if (ganador==1) {
-            JOptionPane.showMessageDialog(null,"FELICIDADES, TENEMOS UN GANADOR","☸☸☸FELICITACIONES☸☸☸",JOptionPane.INFORMATION_MESSAGE);
-            JOptionPane.showMessageDialog(null,"   - Nombre ganador: "+nomGanador+".\n   - Documento ganador: "+docGanador+".\n   - Premio: "+premio+".\n   - Número de la rifa: "+numeroA+".","☸☸☸GANADOR☸☸☸",JOptionPane.INFORMATION_MESSAGE);
-        }
-        else if (finRifa==3) {
-            JOptionPane.showMessageDialog(null,"FIN DE LA RIFA","☸☸☸FIN ADIVINAR NÚMERO☸☸☸",JOptionPane.INFORMATION_MESSAGE);
-        }
+        return (resul);
     }
 }
