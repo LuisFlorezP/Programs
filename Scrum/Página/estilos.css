@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bungee+Shade&family=Bungee+Spice&display=swap');
+
+h1 {
+    text-align: center; 
+    font-family: 'Bungee Spice', cursive;
+    color: rgb(255, 72, 0);
+    font-size: 50px;
+}
+
+h2 {
+    text-align: center; 
+    font-family: 'Bungee Shade', cursive;
+    color: rgb(0, 0, 0);
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.titulo {
+    background-image: url(Imagenes/Titulo.webp);
+    background-position-y: 400xp;
+    height: 120px;
+    background-position: center;
+    padding-top: 30px;
+}
+
+.vinculo {
+    color: black;
+    text-decoration: none;
+}
+
+.fondo {
+    background-image: url(Imagenes/Fondo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.fondoB {
+    background-image: url(Imagenes/Blog.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 50px;
+}
+
+.documento {
+    background-image: url(Imagenes/Valor.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.fondo1 {
+    background-image: url(Imagenes/Fondo1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.textura1 {
+    background-image: url(Imagenes/Tex1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.fondo2 {
+    background-image: url(Imagenes/Fondo2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.textura2 {
+    background-image: url(Imagenes/Tex2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.texto {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Abel', sans-serif;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+}
+
+.navega {
+    background-image: url(Imagenes/Navegador.jpg);
+    background-position-y: 150px;
+}
+
+.documento {
+    margin: 20px;
+}
