@@ -91,3 +91,12 @@ p {
 .documento {
     margin: 20px;
 }
+
+.imagen {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}

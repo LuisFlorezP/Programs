@@ -6,7 +6,7 @@ $password = $_POST['password'];
 $consulta = $conectar->query("select * from usuarios where email='$email'");
 $datos = $consulta->fetch(PDO::FETCH_ASSOC);
 
-if ($datos['password'] == $password) {
+if (password_verify($password, $datos['password'])) {
     header('location: blog.html');
 }
 else {
