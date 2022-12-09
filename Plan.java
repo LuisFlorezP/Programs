@@ -23,12 +23,15 @@ public class Plan {
                 case 2:
                     ventas();
                     break;
-                case 3: 
+                case 3:
+                    inscripciones();
+                    break;
+                case 4: 
                     JOptionPane.showMessageDialog(null,"Saliendo del sistema...","LUCHINI S.A.S",JOptionPane.WARNING_MESSAGE); break;
                 default: 
                     JOptionPane.showMessageDialog(null,"Opción incorrecta, vuelva a intentarlo.","❌❌❌ERROR❌❌❌",JOptionPane.ERROR_MESSAGE); break;
             }
-        } while (menu!=3);
+        } while (menu!=4);
     }
 
     static String categoria() {
@@ -478,5 +481,34 @@ public class Plan {
         t=t1+t2;
         JOptionPane.showMessageDialog(null,"Totalidad de ventas entre ambas sedes: "+t+".","❃❃❃PLAN FAMILIAR❃❃❃",JOptionPane.INFORMATION_MESSAGE);
         
+    }
+
+    static void inscripciones() {
+        int menu=0;
+
+        do {
+            menu=JOptionPane.showInputDialog(null,"   - Opción 1: .\n   - Opción 2: .\n   - Opción 3: .\n   - Opción 4: .\n   - Opción 5: .\n   - Opción 6: Menú anterior.\nIngresar opción:","❃❃❃PLAN FAMILIAR❃❃❃",JOptionPane.QUESTION_MESSAGE);
+            switch (menu) {
+                case 1:
+
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+                case 6: break;
+                default:
+                    JOptionPane.showMessageDialog(null,"Opción incorrecta, vuelva a intentarlo.","❌❌❌ERROR❌❌❌",JOptionPane.ERROR_MESSAGE); break;
+                    break;
+            }
+        } while (menu!=6);
     }
 }
