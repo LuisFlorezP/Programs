@@ -1,5 +1,5 @@
 
-package Plan;
+package Ejercicios.Plan;
 
 public class cliente {   
     private String nombre;
