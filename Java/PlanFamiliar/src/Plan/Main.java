@@ -1,5 +1,5 @@
 
-package Ejercicios.Plan;
+package Plan;
     import javax.swing.JOptionPane;
 
 public class Main {
